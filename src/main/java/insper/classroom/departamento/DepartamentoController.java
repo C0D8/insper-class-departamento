@@ -1,5 +1,7 @@
 package insper.classroom.departamento;
 
+import javax.annotation.processing.Generated;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +25,11 @@ public interface DepartamentoController {
 
     @GetMapping("departamentos/aulas/{id}")
     ResponseEntity<?> getAulas(
+            @PathVariable(required = true) String id
+        );
+
+    @GetMapping("departamentos/monitorias/{id}")
+    ResponseEntity<?> getMonitorias(
             @PathVariable(required = true) String id
         );
 
