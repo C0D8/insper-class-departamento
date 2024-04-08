@@ -21,29 +21,13 @@ public interface DepartamentoController {
         
     );
 
+    @GetMapping("departamentos/aulas/{id}")
+    ResponseEntity<?> getAulas(
+            @PathVariable(required = true) String id
+        );
+
     //criar metodo para o departamento criar a aula ou monitoria 
 
-    @PostMapping("/departamentos/{id}/aulas")
-    ResponseEntity<?> createAula (
-        @PathVariable(required = true) String id,
-        @RequestBody(required = true) CreateAulaIn in
-    );
-
-    @PostMapping("/departamentos/{id}/monitorias")
-    ResponseEntity<?> createMonitoria (
-        @PathVariable(required = true) String id,
-        @RequestBody(required = true) CreateMonitoriaIn in
-    );
-
-    @GetMapping("/departamentos/{id}/aulas")
-    ResponseEntity<?> getAulas (
-        @PathVariable(required = true) String id
-    );
-
-    @GetMapping("/departamentos/{id}/monitorias")
-    ResponseEntity<?> getMonitorias (
-        @PathVariable(required = true) String id
-    );
     
    
 }
