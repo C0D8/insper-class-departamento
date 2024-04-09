@@ -1,1 +1,1 @@
-# insper-class-departamento
+# Projeto Insper Classroom - Departamento
